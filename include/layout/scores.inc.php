@@ -62,6 +62,10 @@ function scoreboard ($scores) {
       <tbody>
      ';
 
+    foreach($scores as $key => $value) {
+      $scores[$key]['score'] += get_extra_points($scores[$key]['team_name']);
+    }
+    usort($scores, function ($a, $b) {return $a['score'] < $b['score'];});
     $i = 1;
     foreach($scores as $score) {
 
