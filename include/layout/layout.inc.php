@@ -58,7 +58,7 @@ echo '
                 <a href="',Config::get('MELLIVORA_CONFIG_SITE_URL'),'">
                     <h3 id="site-logo-text">',Config::get('MELLIVORA_CONFIG_SITE_NAME'),'</h3>
                     <div id="site-logo">
-                        <object data="'.Config::get('MELLIVORA_CONFIG_SITE_URL_STATIC_RESOURCES').'img/mellivora.svg" type="image/svg+xml"></object>
+                        <object data="'.Config::get('MELLIVORA_CONFIG_SITE_URL_STATIC_RESOURCES').'img/uam.png" type="image/png"></object>
                     </div>
                 </a>
             </div>
@@ -122,9 +122,8 @@ function foot () {
 <div id="footer">
     <div class="fade">
         <div id="footer-logo"/>
-            <object data="'.Config::get('MELLIVORA_CONFIG_SITE_URL_STATIC_RESOURCES').'img/mellivora.svg" type="image/svg+xml"></object>
+            <object data="'.Config::get('MELLIVORA_CONFIG_SITE_URL_STATIC_RESOURCES').'img/uam.png" type="image/png"></object>
         </div>
-        <p>Powered by <a href="https://github.com/Nakiami/mellivora">Mellivora</a></p>
     </div>
 </div>
 
