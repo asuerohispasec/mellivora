@@ -197,11 +197,11 @@ function challenges($categories) {
 function get_position_medal ($position, $return_pos = false) {
     switch ($position) {
         case 1:
-            return '<img src="'.Config::get('MELLIVORA_CONFIG_SITE_URL_STATIC_RESOURCES').'img/award_star_gold_3.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" title="'.lang_get('challenge_solved_first').'" alt="'.lang_get('challenge_solved_first').'" />';
+            return '<img src="'.Config::get('MELLIVORA_CONFIG_SITE_URL_STATIC_RESOURCES').'img/award_star_gold_3.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" title="'.lang_get('challenge_solved_first').'" alt="'.lang_get('challenge_solved_first').'" /> (+3 pts) ';
         case 2:
-            return '<img src="'.Config::get('MELLIVORA_CONFIG_SITE_URL_STATIC_RESOURCES').'img/award_star_silver_3.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" title="'.lang_get('challenge_solved_second').'" alt="'.lang_get('challenge_solved_second').'" />';
+            return '<img src="'.Config::get('MELLIVORA_CONFIG_SITE_URL_STATIC_RESOURCES').'img/award_star_silver_3.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" title="'.lang_get('challenge_solved_second').'" alt="'.lang_get('challenge_solved_second').'" /> (+2 pts) ';
         case 3:
-            return '<img src="'.Config::get('MELLIVORA_CONFIG_SITE_URL_STATIC_RESOURCES').'img/award_star_bronze_3.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" title="'.lang_get('challenge_solved_third').'" alt="'.lang_get('challenge_solved_third').'" />';
+            return '<img src="'.Config::get('MELLIVORA_CONFIG_SITE_URL_STATIC_RESOURCES').'img/award_star_bronze_3.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" title="'.lang_get('challenge_solved_third').'" alt="'.lang_get('challenge_solved_third').'" /> (+1 pt) ';
     }
 
     if ($return_pos) {
