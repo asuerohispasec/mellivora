@@ -36,7 +36,7 @@ function json_scoreboard ($user_type = null) {
         $scoreboard['standings'][$i] = array(
             'pos'=>($i+1),
             'team'=>$scores[$i]['team_name'],
-            'score'=>array_get($scores[$i], 'score', 0),
+            'score'=>array_get($scores[$i], 'score', 0) + get_extra_points($scores[$i]['team_name']),
             'country'=>$scores[$i]['country_code']
         );
     }
