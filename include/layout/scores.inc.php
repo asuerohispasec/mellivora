@@ -1,5 +1,52 @@
 <?php
 
+function get_extra_points($team_name) {
+    $extra_points = 0;
+    $now = time();
+    $challenges = db_query_fetch_all('
+      SELECT
+        id,
+        title,
+        points,
+        available_from
+      FROM challenges
+      WHERE
+        available_from < '.$now.' AND
+        exposed = 1
+      ORDER BY points ASC'
+    );
+    foreach($challenges as $challenge) {
+    $users = db_query_fetch_all('
+      SELECT
+        u.id,
+        u.team_name
+      FROM users AS u
+      JOIN submissions AS s ON s.user_id = u.id
+      WHERE
+        u.competing = 1 AND
+        s.correct = 1 AND
+        s.challenge = :challenge
+      ORDER BY s.added ASC
+      LIMIT 3',
+      array(
+        'challenge'=>$challenge['id']
+      )
+    );
+    if (count($users)) {
+      // Extra points: 3 points first-solve, 2 points second-solve, 1 point third-solve
+      $extra = 3;
+      foreach($users as $user) {
+        if (htmlspecialchars($team_name) === htmlspecialchars($user['team_name'])) {
+          $extra_points += $extra;
+          break;
+        }
+        $extra--;
+      }
+    }
+  }
+  return $extra_points;
+}
+
 function scoreboard ($scores) {
 
     echo '
