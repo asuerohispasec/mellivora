@@ -143,11 +143,11 @@ foreach($challenges as $challenge) {
         echo '
         <div class="panel panel-default challenge-container">
             <div class="panel-heading">
-                <h4 class="challenge-head">Hidden challenge worth ', number_format($challenge['points']), 'pts</h4>
+                <h4 class="challenge-head">' . lang_get('hidden_challenge_worth',array('pts'=>number_format($challenge['points']))) . '</h4>
             </div>
             <div class="panel-body">
                 <div class="challenge-description">
-                    Available in ',time_remaining($challenge['available_from']),' (from ', date_time($challenge['available_from']), ' until ', date_time($challenge['available_until']), ')
+                    '.lang_get('available_in2', array('available_in'=>time_remaining($challenge['available_from']),'from'=>date_time($challenge['available_from']),'until'=>date_time($challenge['available_until']))) .'
                 </div>
             </div>
         </div>';
@@ -183,9 +183,10 @@ foreach($challenges as $challenge) {
 
     echo '</h4>';
 
-    if (should_print_metadata($challenge)) {
-        print_time_left_tooltip($challenge);
-    }
+    //JULIAN 2021-01: Quitamos el tiempo restante
+    //if (should_print_metadata($challenge)) {
+    //    print_time_left_tooltip($challenge);
+    //}
 
     echo '</div>
 
