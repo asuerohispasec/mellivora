@@ -12,6 +12,9 @@ function send_email (
     $replyto_name = null,
     $is_html = false) {
 
+    //JULIAN: 2021-01: Deshabilitamos el envio de emails
+    return true;
+
     if (!$from_email) {
         $from_email = Config::get('MELLIVORA_CONFIG_EMAIL_FROM_EMAIL');
     }
