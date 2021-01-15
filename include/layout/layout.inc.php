@@ -56,7 +56,6 @@ echo '
         <div id="header-inner">
             <div id="header-logo">
                 <a href="',Config::get('MELLIVORA_CONFIG_SITE_URL'),'">
-                    <h3 id="site-logo-text">',Config::get('MELLIVORA_CONFIG_SITE_NAME'),'</h3>
                     <div id="site-logo">
                         <object data="'.Config::get('MELLIVORA_CONFIG_SITE_URL_STATIC_RESOURCES').'img/uam.png" type="image/png"></object>
                     </div>
