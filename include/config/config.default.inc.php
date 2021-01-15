@@ -32,15 +32,15 @@
 Config::set('MELLIVORA_CONFIG_PATH_BASE', '/var/www/mellivora/');
 
 // language
-Config::set('MELLIVORA_CONFIG_SITE_LANGUAGE', 'en');
+Config::set('MELLIVORA_CONFIG_SITE_LANGUAGE', 'es');
 
 // general site settings
-Config::set('MELLIVORA_CONFIG_SITE_NAME', 'Mellivora');
-Config::set('MELLIVORA_CONFIG_SITE_SLOGAN', 'Mellivora, the CTF engine');
+Config::set('MELLIVORA_CONFIG_SITE_NAME', 'UAM');
+Config::set('MELLIVORA_CONFIG_SITE_SLOGAN', 'Una al Mes');
 Config::set('MELLIVORA_CONFIG_SITE_DESCRIPTION', '');
 
-Config::set('MELLIVORA_CONFIG_SITE_URL', 'http://localhost/');
-Config::set('MELLIVORA_CONFIG_SITE_URL_STATIC_RESOURCES', 'http://localhost/');
+Config::set('MELLIVORA_CONFIG_SITE_URL', 'https://unaalmes2.hispasec.com/');
+Config::set('MELLIVORA_CONFIG_SITE_URL_STATIC_RESOURCES', 'https://unaalmes2.hispasec.com/');
 
 Config::set('MELLIVORA_CONFIG_SITE_ADMIN_RELPATH', 'admin/');
 Config::set('MELLIVORA_CONFIG_SITE_ADMIN_URL', Config::get('MELLIVORA_CONFIG_SITE_URL') . Config::get('MELLIVORA_CONFIG_SITE_ADMIN_RELPATH'));
@@ -86,8 +86,8 @@ Config::set('MELLIVORA_CONFIG_EMAIL_REPLYTO_NAME', '');
 // 0 off (for production use)
 // 1 client messages
 // 2 client and server messages
-Config::set('MELLIVORA_CONFIG_EMAIL_SMTP_DEBUG_LEVEL', 2);
-Config::set('MELLIVORA_CONFIG_EMAIL_SMTP_HOST', 'smtp.gmail.com');
+Config::set('MELLIVORA_CONFIG_EMAIL_SMTP_DEBUG_LEVEL', 0);
+Config::set('MELLIVORA_CONFIG_EMAIL_SMTP_HOST', '127.0.0.1');
 Config::set('MELLIVORA_CONFIG_EMAIL_SMTP_PORT', 587);
 Config::set('MELLIVORA_CONFIG_EMAIL_SMTP_SECURITY', 'tls');
 // require SMTP authentication?
@@ -96,18 +96,18 @@ Config::set('MELLIVORA_CONFIG_EMAIL_SMTP_USER', 'you@gmail.com');
 Config::set('MELLIVORA_CONFIG_EMAIL_SMTP_PASSWORD', '');
 
 // enable re-captcha on signup and various public forms
-Config::set('MELLIVORA_CONFIG_RECAPTCHA_ENABLE_PUBLIC', false);
+Config::set('MELLIVORA_CONFIG_RECAPTCHA_ENABLE_PUBLIC', true);
 // enabled captcha also on private forms for logged in users
 Config::set('MELLIVORA_CONFIG_RECAPTCHA_ENABLE_PRIVATE', false);
 // re-captcha keys must be set to function
-Config::set('MELLIVORA_CONFIG_RECAPTCHA_PUBLIC_KEY', '');
-Config::set('MELLIVORA_CONFIG_RECAPTCHA_PRIVATE_KEY', '');
+Config::set('MELLIVORA_CONFIG_RECAPTCHA_PUBLIC_KEY', '6LfVMiwaAAAAAItDPTykzY1wla-0XUd3I-_KWDaW');
+Config::set('MELLIVORA_CONFIG_RECAPTCHA_PRIVATE_KEY', '6LfVMiwaAAAAADZq4mfGnkDfqt220upw1Yk45jBB');
 
 // only trust x-forwarded-for ip address if you're running
 // some sort of reverse proxy, like Cloudflare. when set
 // to true, the latest added forwarded-for ip will be used
 // for logging and housekeeping
-Config::set('MELLIVORA_CONFIG_TRUST_HTTP_X_FORWARDED_FOR_IP', false);
+Config::set('MELLIVORA_CONFIG_TRUST_HTTP_X_FORWARDED_FOR_IP', true);
 
 // when this is set to true, an IP address
 // will be resolved when it is listed. set
