@@ -131,6 +131,7 @@ $lang['cat_unavailable_explanation'] = 'Esta categoria no esta disponible. Esta 
 $lang['hidden_challenge_worth'] = 'Reto oculto valorado en {pts}pts';
 
 $lang['available_in'] = 'Disponible en {available_in} (desde {from} hasta {to})';
+$lang['available_in2'] = 'Disponible en {available_in}';
 $lang['minimum_time_between_submissions'] = 'Tiempo de espera minimo de {time} entre envios.';
 $lang['num_submissions_remaining'] = '{num_remaining} envios restantes.';
 $lang['time_remaining'] = '{time} restante';
