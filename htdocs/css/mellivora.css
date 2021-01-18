@@ -52,7 +52,8 @@ body {
 }
 
 #header-inner {
-    background-color: #f8f8f8;
+    /*background-color: #f8f8f8;*/
+    background-color: #eda250;
     border-bottom: 4px solid rgba(234, 234, 234, 1);
     max-width: 1100px;
     overflow: auto;
@@ -78,17 +79,21 @@ body {
 /**Pill overrides**/
 
 #menu-main .active a {
-    color: #ffffff;
+    /*color: #ffffff;*/
+    color: #eda250;
+    background-color: #ffffff;
 }
 
 #menu-main :not(.active) a:hover, #menu-main :not(.active) form:hover {
-    background-color: rgba(234, 234, 234, 0.75);
+    /*background-color: rgba(234, 234, 234, 0.75);*/
+    background-color: #cd8230;
 }
 
 #menu-main a {
     padding: 7px 15px;
     margin: 5px 5px;
     border-radius: 4px;
+    color: #ffffff;
 }
 
 #menu-main button {
@@ -98,7 +103,8 @@ body {
     height: 40px;
     font: inherit;
     cursor: pointer;
-    color: #428BCA;
+    /*color: #428BCA;*/
+    color: #ffffff;
     margin: 2px 0 0 0;
 }
 
@@ -164,9 +170,10 @@ body {
 }
 
 #site-logo-text {
-    color: #000;
+    /*color: #000;*/
+    color: #fff;
     display: inline-block;
-    font-family: Georgia, Serif;
+    /*font-family: Georgia, Serif;*/
     line-height: 40px;
     margin-top: 0;
     margin-bottom: 0;
