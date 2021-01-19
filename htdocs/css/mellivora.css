@@ -423,3 +423,28 @@ pre {
 .modal.challenge-attempt .modal-body {
     overflow: auto;
 }
+
+
+h4.category {
+    border: 1px solid #eda250;
+    border-radius: 4px;
+    /* cursor: pointer; */
+    /*float: left;*/
+    margin: 5px 0px;
+    text-align: center;
+    padding:10px;
+    color: #ffffff;
+}
+
+h4.category {
+    background: #faaa55;
+}
+
+.btn-primary {
+    background-color: #faaa55;
+    border-color: #faaa55;
+}
+
+a {
+    color: #124a7e;
+}

@@ -77,20 +77,32 @@ if (empty($current_category)) {
     message_generic('Challenges', 'Your CTF is looking a bit empty! Start by adding a category using the management console.');
 }
 
-// write out our categories menu
-echo '<div id="categories-menu">
-<ul id="categories-menu">';
-foreach ($categories as $cat) {
-    if ($now < $cat['available_from'] || $now > $cat['available_until']) {
-        echo '<li class="disabled">
-        <a data-container="body" data-toggle="tooltip" data-placement="top" class="has-tooltip" title="Available in '.time_remaining($cat['available_from']).'.">',htmlspecialchars($cat['title']),'</a>
-        </li>';
+// // write out our categories menu
+// echo '<div id="categories-menu">
+// <ul id="categories-menu">';
+// foreach ($categories as $cat) {
+//     if ($now < $cat['available_from'] || $now > $cat['available_until']) {
+//         echo '<li class="disabled">
+//         <a data-container="body" data-toggle="tooltip" data-placement="top" class="has-tooltip" title="Available in '.time_remaining($cat['available_from']).'.">',htmlspecialchars($cat['title']),'</a>
+//         </li>';
+//     } else {
+//         echo '<li ',($current_category['id'] == $cat['id'] ? ' class="active"' : ''),'><a href="',Config::get('MELLIVORA_CONFIG_SITE_URL'),'challenges?category=',htmlspecialchars(to_permalink($cat['title'])),'">',htmlspecialchars($cat['title']),'</a></li>';
+//     }
+// }
+// echo '</ul>
+// </div>';
+
+
+echo '<h2 class="page-header">Retos </h2>';
+
+
+foreach($categories as $current_category) {
+    if ($now < $current_category['available_from'] || $now > $current_category['available_until']) {
+        continue;
     } else {
-        echo '<li ',($current_category['id'] == $cat['id'] ? ' class="active"' : ''),'><a href="',Config::get('MELLIVORA_CONFIG_SITE_URL'),'challenges?category=',htmlspecialchars(to_permalink($cat['title'])),'">',htmlspecialchars($cat['title']),'</a></li>';
+        echo '<h4 class="category">', htmlspecialchars($current_category['title']),'</h4>';
     }
-}
-echo '</ul>
-</div>';
+
 
 // check that the category is actually available for display
 if ($now < $current_category['available_from'] || $now > $current_category['available_until']) {
@@ -294,6 +306,8 @@ foreach($challenges as $challenge) {
     </div> <!-- / panel-body -->
     </div> <!-- / challenge-container -->';
 }
+
+} //foreach categories
 echo '</div> <!-- / challenges-container-->';
 
 foot();
